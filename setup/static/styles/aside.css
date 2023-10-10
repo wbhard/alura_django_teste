@@ -1,0 +1,175 @@
+    body{
+        margin: 0;
+        padding: 0;
+    }
+
+    div{
+        margin: 0;
+        padding: 0;
+    }
+    p{
+        margin: 0;
+    }
+
+    main {
+        display: grid;
+        grid-template-areas:
+            "head head head"
+            "sid nave nave"
+            "sid content content"
+            "foot foot foot";
+        grid-template-columns: 50px 3fr 3fr;
+        grid-template-rows: 50px min(40px) 77.3% 8vh;
+        height: 100vh;
+    
+    }
+
+    header{
+        grid-area: head;
+        background-color: rgb(59, 63, 63);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 0.5px solid #A1ACB3;
+    }
+
+    article {
+        grid-area: content;
+        background-color: white;
+        border-left: 0.5px solid #A1ACB3;
+        overflow-y: scroll;
+    }
+
+    aside {
+        white-space: nowrap;
+        width: 50px;
+        overflow: hidden;
+        text-overflow: clip;
+        grid-area: sid;
+        background-color: #29B5F0;
+        padding: 0;
+        margin: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        transition: width 0.5s;
+        color: white;
+    }
+
+    aside:hover {
+        background: linear-gradient(90deg, #29B5F0, #30D2D9);
+        transition: width 0.5s;
+        width: 150px;
+    }
+
+    footer {
+        grid-area: foot;
+        background-color: rgb(250,250,250);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        box-shadow:
+            3px 3px black,
+            3.1em 0 0.1em black;
+    }
+
+    nav{
+        grid-area: nave;
+        text-decoration-line: none;
+        background: linear-gradient(90deg, #29B5F0, #30D2D9);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        border-bottom: 0.5px solid #A1ACB3;
+    }
+
+    nav a{
+        text-decoration-line: none;
+        color: white;
+    }
+
+    nav a:hover{
+        text-decoration-line: underline;
+        transition: 2s;
+    }
+    
+    img {
+        display: inline-block;
+        margin-right: 8px;
+    }
+
+    .tabel{
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+    }
+
+    .nome1{
+        width: 50%;
+    }
+
+    .nome2{
+        width: 50%;
+    }
+
+    .footer{
+        display: flex;
+        flex-direction: row;  
+    }
+
+    .sideBar{
+        margin: 40px 5px 5px 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .pSide{
+        margin-bottom: 10px;
+    }
+
+    .painel-home{
+        margin: 10px;
+    }
+
+    .img-header{
+        width: 37px;
+        height: 28px;
+        padding: 0px;
+    }
+    .a-header{
+        color: white;
+        text-decoration-line: none;
+    }
+
+    .div-header{
+
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+            "algo algo  . logout";
+        grid-template-columns: 50px 3fr 3fr;
+        align-items: center;
+        justify-content: center;
+    }
+    .div-header-logout{
+        grid-area: logout;
+        justify-content: end;
+        width: auto;
+        margin-right: 20px;
+    }
+    .div-header-algo{
+        grid-area: algo;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin-left: 20px;
+        width: 90px;
+        height: 30px;
+        background-color: rgb(72, 77, 77);
+        color: white;
+        border-radius: 10ch;
+    }

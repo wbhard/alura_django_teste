@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Multi Columns</title>
+    <link rel="stylesheet" href="{% static '/styles/aside.css' %}">
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="div-header">
+                <div class="div-header-algo">
+                    <b>29/09/2023</b>
+                </div>
+                <div>
+                    <img src="{% static 'assets/Capturar.ico' %}" class="img-header">
+                </div>
+                <div class="div-header-logout">
+                    <a href="{% url 'login' %}" class="a-header">Logout</a>
+                </div>
+            </div>
+        </header>
+
+        <nav>
+            <div class="painel-home">
+                <a href="#" >HOME</a>
+            </div>
+
+            <div class="painel-page">
+                <a href="#">PAGE</a>
+            </div>
+
+            <div class="painel-consulta">
+                <a href="#">CONSULTA</a>
+            </div>
+        </nav>
+
+        {% block content %}{% endblock %}
+        
+        <aside>
+            <div class="sideBar">
+                <p class="pSide"><img src="{% static 'assets/Imagem1.png' %}" width="30" height="25" >Icon SideBar</p>
+                <p class="pSide"><img src="{% static 'assets/Imagem1.png' %}" width="30" height="25" >Icon SideBar</p>
+            <div>
+        </aside>
+
+        <footer>
+            <div class="footer">
+                <p>Footer</p>
+                <p>Footer</p>
+            </div>
+        </footer>
+
+    </main>
+
+</body>
+
+</html>

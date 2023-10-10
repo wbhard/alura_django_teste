@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title> Teste </title>
+    <link rel="stylesheet" href="{% static '/styles/asidea.css' %}">
+</head>
+
+<body>
+    <div id="container-principal">
+        <div id="container-login">
+
+            <header id="header-div-login">
+                <span class="span-logo"> FOLCUS  </span>
+                <span class="span-welcome"> Bem-vindo </span>
+            </header>
+
+            <div id="form-group">
+                <form class="form-login">
+                    <label for="user"></label>
+                    <input type="text" id="user" placeholder="NOME DE USUARIO" name="user" class="caixas_input">
+                    <label for="password"></label>
+                    <input type="password" id="password" placeholder="SENHA" name="password" class="caixas_input">
+                    <input type="submit" value="Entrar">
+                </form>
+            </div>
+
+            <footer class="footer-login">
+                <a href="{% url 'index' %}" class="a-login">Trocar senha</a>
+            </footer>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
