@@ -5,56 +5,64 @@
 <head>
     <title>Multi Columns</title>
     <link rel="stylesheet" href="{% static '/styles/aside.css' %}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+        crossorigin="anonymous"
+    >
+    <link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    >
 </head>
 
 <body>
     <main>
         <header>
-            <div class="div-header">
-                <div class="div-header-algo">
-                    <b>29/09/2023</b>
-                </div>
-                <div>
-                    <img src="{% static 'assets/Capturar.ico' %}" class="img-header">
-                </div>
-                <div class="div-header-logout">
-                    <a href="{% url 'login' %}" class="a-header">Logout</a>
-                </div>
-            </div>
+		<nav class="navbar bg-body-tertiary bg-dark" data-bs-theme="dark">
+  			<div class="container-fluid">
+    				<a class="navbar-brand" href="#">
+      					<img src="{% static 'assets/Capturar.ico' %}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      						Folcus
+    				</a>
+	      			<a class="navbar-text " href="{% url 'login' %}">Logout</a>
+  			</div>
+		</nav>
+
         </header>
-
-        <nav>
-            <div class="painel-home">
-                <a href="#" >HOME</a>
-            </div>
-
-            <div class="painel-page">
-                <a href="#">PAGE</a>
-            </div>
-
-            <div class="painel-consulta">
-                <a href="#">CONSULTA</a>
-            </div>
+        
+        <nav class="nav-options">
+		<ul class="nav">
+  			<li class="nav-item">
+    				<a class="nav-link " href="#">Cadastrar</a>
+  			</li>
+  			<li class="nav-item">
+    				<a class="nav-link" href="#">Consultar</a>
+  			</li>
+  			<li class="nav-item" >
+    				<a class="nav-link" href="#">Editar</a>
+  			</li>
+		</ul>
         </nav>
 
         {% block content %}{% endblock %}
-        
+
         <aside>
-            <div class="sideBar">
-                <p class="pSide"><img src="{% static 'assets/Imagem1.png' %}" width="30" height="25" ><a href="\cadastro-cliente">Icon SideBar></a></p>
-                <p class="pSide"><img src="{% static 'assets/Imagem1.png' %}" width="30" height="25" ><a href="\cadastro-produto">Icon SideBar></a></p>
-            <div>
+            <div class="side-bar">
+                <a href="\cadastro-cliente"><i class="bi bi-person-fill"></i>Cliente</a>
+                <a href="\cadastro-produto"><i class="bi bi-box-seam"></i>Produto</a>
+            </div>
+	    <p class="text-center">a</p>
         </aside>
 
-        <footer>
-            <div class="footer">
-                <p>Footer</p>
-                <p>Footer</p>
-            </div>
-        </footer>
 
     </main>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

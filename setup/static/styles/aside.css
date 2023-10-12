@@ -1,216 +1,174 @@
-    body{
-        margin: 0;
-        padding: 0;
-    }
+body{
+    margin: 0;
+    padding: 0;
+}
 
-    div{
-        margin: 0;
-        padding: 0;
-    }
-    p{
-        margin: 0;
-    }
+div{
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin: 0;
+}
 
-    main {
-        display: grid;
-        grid-template-areas:
-            "head head head"
-            "sid nave nave"
-            "sid content content"
-            "foot foot foot";
-        grid-template-columns: 50px 3fr 3fr;
-        grid-template-rows: 50px min(40px) 77.3% 8vh;
-        height: 100vh;
-    
-    }
+main {
+    display: grid;
+    grid-template-areas:
+        "head head head"
+        "sid nave nave"
+        "sid content content";
+    grid-template-columns: 50px 3fr 3fr;
+    grid-template-rows: auto 7vh auto;
+    height: 100vh;
+    background-color: green;
+}
 
-    header{
-        grid-area: head;
-        background-color: rgb(59, 63, 63);
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        border-bottom: 0.5px solid #A1ACB3;
-    }
+header{
+    grid-area: head;
+    border-bottom: 0.5px solid #A1ACB3;
+} 
 
-    article {
-        grid-area: content;
-        background-color: rgb(255, 255, 255);
-        border-left: 0.5px solid #A1ACB3;
-        overflow-y: scroll;
-    }
+article {
+    grid-area: content;
+    background-color: white;
+    border-left: 0.5px solid #A1ACB3;
+    overflow-y: scroll;
+    height: 100%;
+}
 
-    aside {
-        white-space: nowrap;
-        width: 50px;
-        overflow: hidden;
-        text-overflow: clip;
-        grid-area: sid;
-        background-color: #29B5F0;
-        padding: 0;
-        margin: 0;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        transition: width 0.5s;
-        color: white;
-    }
+article input:hover{
+border: 0.5px solid black
+}
 
-    aside:hover {
-        background: linear-gradient(90deg, #29B5F0, #30D2D9);
-        transition: width 0.5s;
-        width: 150px;
-    }
+aside{
+    white-space: nowrap;
+    width: 50px;
+    height: auto;
+    overflow: hidden;
+    text-overflow: clip;
+    grid-area: sid;
+    background-color: #39856B;
+    padding: 0;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition: width 0.5s;
 
-    footer {
-        grid-area: foot;
-        background-color: rgb(250,250,250);
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        box-shadow:
-            3px 3px black,
-            3.1em 0 0.1em black;
-    }
+}
 
-    nav{
-        grid-area: nave;
-        text-decoration-line: none;
-        background: linear-gradient(90deg, #29B5F0, #30D2D9);
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        border-bottom: 0.5px solid #A1ACB3;
-    }
+aside:hover  {
+    background: linear-gradient(90deg, #39856B, #335247);
+    transition: width 0.5s;
+    width: 150px;
+}
 
-    nav a{
-        text-decoration-line: none;
-        color: white;
-    }
+.side-bar img{
+    display: inline-block;
+    margin-right: 8px;
+}
 
-    nav a:hover{
-        text-decoration-line: underline;
-        transition: 2s;
-    }
-    
-    img {
-        display: inline-block;
-        margin-right: 8px;
-    }
+.side-bar{
+    margin: 60px 5px 5px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 84vh;
+}
 
-    .tabel{
-        display: flex;
-        flex-direction: row;
-        padding: 5px;
-        height: 100%;
-    }
+.side-bar a{
+    text-decoration-line: none;
+    color: white;
+    margin-bottom: 10px;
+}
+.side-bar i{
+    font-size: 30px;
+    margin-right: 8px;
+}
 
-    .nome1{
-        width: 50%;
-    }
+.side-bar a:hover, .side-bar a:focus{
+    transition: 0.5s;
+    color: #ABFFC4;
+}
 
-    .nome2{
-        width: 50%;
-    }
+footer {
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        3.1em 0 0.1em black;
+}
 
-    .footer{
-        display: flex;
-        flex-direction: row;  
-    }
+.nav-options{
+    grid-area: nave;
+    text-decoration-line: none;
+    background: linear-gradient(90deg, #39856B, #335247);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 0.5px solid #A1ACB3;
+}
 
-    .sideBar{
-        margin: 40px 5px 5px 12px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
 
-    .pSide{
-        margin-bottom: 10px;
-    }
+.nav-options a{
+    text-decoration-line: none;
+    color: white;
+}
 
-    .painel-home{
-        margin: 10px;
-    }
+.nav-options a:focus, .nav-options a:hover {
+    transition: 0.5s;
+color: #ABFFC4 !important;
+}
 
-    .img-header{
-        width: 37px;
-        height: 28px;
-        padding: 0px;
-    }
-    .a-header{
-        color: white;
-        text-decoration-line: none;
-    }
+.tabel{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+padding: 10px;
+}
 
-    .div-header{
+.footer{
+    display: flex;
+    flex-direction: row;  
+}
 
-        width: 100%;
-        display: grid;
-        grid-template-areas:
-            "algo algo  . logout";
-        grid-template-columns: 50px 3fr 3fr;
-        align-items: center;
-        justify-content: center;
-    }
-    .div-header-logout{
-        grid-area: logout;
-        justify-content: end;
-        width: auto;
-        margin-right: 20px;
-    }
-    .div-header-algo{
-        grid-area: algo;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        margin-left: 20px;
-        width: 90px;
-        height: 30px;
-        background-color: rgb(72, 77, 77);
-        color: white;
-        border-radius: 10ch;
-    }
-    .txt_id {
-        text-align: center;
-        font-size: 10px;
-        margin-bottom: 10px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        background-color: white;
-        border-radius: 5px;
-        width: 50px;
-        border: 0.5px solid #dcdde1;
-        font-weight: bold
-    /* ATENÇÃO COLOCAR O PLACEHOLDER NO TOPO TIKTOK */
-    }
+.a-side{
+    margin-bottom: 10px;
+}
 
-    .txt_nome {
-        text-align: center;
-        font-size: 10px;
-        margin-bottom: 10px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        background-color: white;
-        border-radius: 5px;
-        width: 300px;
-        border: 0.5px solid #dcdde1;
-        font-weight: bold
-    /* ATENÇÃO COLOCAR O PLACEHOLDER NO TOPO TIKTOK */
-    }
-    .txt_phone {
-        text-align: center;
-        font-size: 10px;
-        margin-bottom: 10px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        background-color: white;
-        border-radius: 5px;
-        width: 300px;
-        border: 0.5px solid #dcdde1;
-        font-weight: bold
-    /* ATENÇÃO COLOCAR O PLACEHOLDER NO TOPO TIKTOK */
-    }
+.imput-text-id {
+text-align: center;
+ font-size: 10px;
+ margin-bottom: 10px;
+ padding-top: 15px;
+ padding-bottom: 15px;
+ background-color: white;
+ border-radius: 5px;
+ width: 50px;
+ border: 0.5px solid #dcdde1;
+ font-weight: bold;
+/* ATENÇÃO COLOCAR O PLACEHOLDER NO TOPO TIKTOK */
+}
+
+.imput-text-nome {
+text-align: center;
+ font-size: 10px;
+ margin-bottom: 10px;
+ padding-top: 15px;
+ padding-bottom: 15px;
+ background-color: white;
+ border-radius: 5px;
+ width: 300px;
+ border: 0.5px solid #dcdde1;
+ font-weight: bold;
+/* ATENÇÃO COLOCAR O PLACEHOLDER NO TOPO TIKTOK */
+}
+
+.visible {
+visibility: visible !important;
+}
+.invisible {
+visibility: hidden !important;
+}
