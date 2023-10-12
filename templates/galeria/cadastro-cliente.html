@@ -3,14 +3,20 @@
 {% block content %}
 <article>
     <div class="tabel">
-        <form class="">
-            <label for="user"></label>
-            <input type="text" id="id" placeholder="ID" name="id" class="imput-text-id">
-            <label for="name"></label>
-            <input type="text" id="name" placeholder="NOME" name="name" class="imput-text-nome">
-            <label for="phone"></label>
-            <input type="tel" id="phone" placeholder="TELEFONE" name="phone" class="imput-text-nome">
-            <!-- FORM NO PYTHON <input type="submit" value="Entrar"> -->
+        <form class="app-form">
+            <div class="form-group">
+                <input autocomplete="off" type="text" id="id" name="id" class="imput-text-id" required>
+                <span>ID</span>
+            </div>
+            <div class="form-group">
+                <input autocomplete="off" type="text" id="name" name="name" class="imput-text-nome" required>
+                <span>Nome</span>
+            </div>
+            <div class="form-group">
+                <input autocomplete="off" type="tel" id="phone" name="phone" class="imput-text-nome" required>
+                <span>Telefone</span>
+            </div>
+        <!-- FORM NO PYTHON <input type="submit" value="Entrar"> -->
         </form>
     </div>
    </article>

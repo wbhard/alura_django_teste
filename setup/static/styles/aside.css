@@ -53,7 +53,7 @@ aside{
     padding-top: 5px;
     padding-bottom: 5px;
     transition: width 0.5s;
-
+    position: relative;
 }
 
 aside:hover  {
@@ -79,6 +79,7 @@ aside:hover  {
     text-decoration-line: none;
     color: white;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 .side-bar i{
     font-size: 30px;
@@ -171,4 +172,31 @@ visibility: visible !important;
 }
 .invisible {
 visibility: hidden !important;
+}
+
+.form-group{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    position: relative;
+}
+.app-form input{
+    height: 45px;
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+.app-form span{
+    position: absolute;
+    left: 5px;
+    top: 12px;
+    pointer-events: none;
+    transition: 0.5s;
+    opacity: .5;
+}
+
+.app-form input:focus ~span,
+.app-form input:valid ~span{
+    transform: translateY(-30px);
+    font-size: 14px;
+    opacity: 1;
 }
