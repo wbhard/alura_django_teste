@@ -24,7 +24,7 @@
         <header>
 		<nav class="navbar bg-body-tertiary bg-dark" data-bs-theme="dark">
   			<div class="container-fluid">
-    				<a class="navbar-brand" href="#">
+    				<a class="navbar-brand" href="{% url 'home' %}">
       					<img src="{% static 'assets/Capturar.ico' %}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
       						Folcus
     				</a>
@@ -34,28 +34,13 @@
 
         </header>
         
-        <nav class="nav-options">
-		<ul class="nav">
-  			<li class="nav-item">
-    				<a class="nav-link" href="#">Cadastrar</a>
-  			</li>
-  			<li class="nav-item">
-    				<a class="nav-link" href="#">Consultar</a>
-  			</li>
-  			<li class="nav-item" >
-    				<a class="nav-link" href="#">Editar</a>
-  			</li>
-		</ul>
-        </nav>
+        {% block nav %}{% endblock %}
 
         {% block content %}{% endblock %}
 
         <aside>
-            <div class="side-bar">
-                <a href="\cadastro-cliente"><i class="bi bi-person-fill"></i>Cliente</a>
-                <a href="\cadastro-produto"><i class="bi bi-box-seam"></i>Produto</a>
-            </div>
-	    <p class="text-center">a</p>
+            {% block side-bar %}{% endblock %}
+	        <p class="text-center">a</p>
         </aside>
 
 

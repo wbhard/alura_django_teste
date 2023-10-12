@@ -9,3 +9,6 @@ def login(request):
 
 def produto(request):
     return render(request, 'galeria/cadastro-produto.html')
+
+def home(request):
+    return render(request, 'galeria/home.html')

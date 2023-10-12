@@ -120,7 +120,7 @@ footer {
 
 .nav-options a:focus, .nav-options a:hover {
     transition: 0.5s;
-color: #ABFFC4 !important;
+    color: #ABFFC4 !important;
 }
 
 .tabel{
